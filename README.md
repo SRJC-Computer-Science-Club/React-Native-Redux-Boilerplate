@@ -6,9 +6,9 @@ OOP sucks in React and JS, I welcome you to clone
 
 To run:
 clone,
-npm install 
-react-native run-android 
-or (if you have a mac and xcode)
-react-native run-ios 
+## npm install
+## react-native run-android
+### or (if you have a mac and xcode)
+##react-native run-ios
 
 

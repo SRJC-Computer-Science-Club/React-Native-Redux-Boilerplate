@@ -11,7 +11,8 @@ import {
     PanResponder,
     Animated,
     Dimensions,
-    Button
+    Button,
+	Platform
 } from 'react-native';
 import * as actions from './actions/actions'
 import PageOne from './components/page1'
@@ -37,8 +38,14 @@ const App = (props) => {
 	}
 
 
+	let extraStyle = {};
+	//this is just for styling
+    if(Platform.OS === "ios"){
+		extraStyle = {marginTop: 23}
+    }
+
     return (
-       <View style={AppStyles.container}>
+       <View style={[AppStyles.container, extraStyle]}>
             <Header/>
             {page}
            <View>
@@ -77,7 +84,6 @@ const AppStyles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#F5FCFF',
-        marginTop: 23,
         flexDirection: 'column',
     },
 	counterContainer: {

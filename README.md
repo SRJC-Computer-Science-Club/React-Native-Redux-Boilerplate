@@ -8,9 +8,10 @@ OOP sucks in React and JS, I welcome you to clone
 ````
 clone,
 npm install
- react-native run-android
+react-native run-android
 ```
-### or (if you have a mac and xcode)
+### or (if you have a mac and xcode 
+###        ....and for some reason want to run ios)
 ````
 react-native run-ios
 ```

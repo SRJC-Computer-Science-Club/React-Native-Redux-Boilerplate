@@ -10,8 +10,8 @@ clone,
 npm install
 react-native run-android
 ```
-### or (if you have a mac and xcode 
-###        ....and for some reason want to run ios)
+#### or (if you have a mac and xcode 
+#####        ....and for some reason want to run ios)
 ````
 react-native run-ios
 ```

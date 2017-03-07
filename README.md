@@ -10,17 +10,16 @@ Are there any modules or libraries used to collaborate in this project?
 ### How to join and understand this project
 
 - Check out this [tutorial][Tutorial] to set up on both **Windows** and **Mac**.
-````
-npm install
-````
 
 - In cmd, cd to the cloned repo and run:
 ````
+npm install
 react-native run-android
 ```
 
 - In Terminal, cd to the cloned repo and run:
 ````
+npm install
 react-native run-ios
 ```
 

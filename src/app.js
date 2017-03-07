@@ -31,10 +31,10 @@ const App = (props) => {
 
     //BEFORE we render the component we decide what page it should be
     let page = null;
-    if(props.currentPage == 1){
-        page = <PageOne/>;
-    }else{
-		page = <PageTwo/>;
+		if (props.currentPage == 1) {
+		    page = < PageOne / > ;
+		} else {
+		    page = < PageTwo / > ;
 	}
 
 
@@ -81,17 +81,16 @@ export default connect(
 
 
 const AppStyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#F5FCFF',
-        flexDirection: 'column',
-    },
-	counterContainer: {
-		flex: 1,
-		flexDirection: 'row',
-        justifyContent:"center",
-	},
-    incrementButton: {
-        alignSelf: 'center'
-    }
+  container: {
+      flex: 1,
+      flexDirection: 'column',
+  },
+  counterContainer: {
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: "center",
+  },
+  incrementButton: {
+      alignSelf: 'center'
+  }
 });

@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import * as actions from '../actions/actions'
 
+import TaskTable from './tasks'
 
 const PageOne = (props) => {
 
@@ -23,23 +24,13 @@ const PageOne = (props) => {
 
 	return(
 		<View style={PageOneStyles.container}>
-			<Text style={{color: "white", fontSize: 30, marginBottom: 10}}>
-				Counter 1
-			</Text>
-			<View style={PageOneStyles.counterContainer}>
-				<Button onPress={() => props.decrement("counterOne")} title={"decrement"} color={"#0F7BE0"}/>
-				<Text style={{color: "white", marginLeft: 30, marginRight: 30, fontSize: 20, }}>
-					{props.counter}
-				</Text>
-				<Button onPress={() => props.increment("counterOne")} title={"increment"} color={"#0F7BE0"}/>
-			</View>
+			<TaskTable/>
 		</View>
 	);
 };
 
 export default connect(
 	(state) => ({
-		counter: state.data.counterOne,
 	}),
 	(dispatch) => ({
 		increment: (name) => dispatch(actions.incrementCounter(name)),
@@ -55,7 +46,6 @@ const PageOneStyles = StyleSheet.create({
 		flexDirection: 'column',
 		justifyContent:"center",
 		alignItems: 'center',
-		backgroundColor: "#212331",
 	},
 	counterContainer: {
 		flexDirection: 'row',

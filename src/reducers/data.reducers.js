@@ -11,6 +11,10 @@ import {
 const initialState = {
    counterOne: 1,
    counterTwo: 2,
+	 tasks: [
+		 {'id': 0, 'title': 'Email Peeps', 'deadline': 'Mar 10', 'notes': 'be sure to include the Dean of the department'},
+		 {'id': 1, 'title': 'Check out repo', 'deadline': 'Mar 10', 'notes': 'make Adam proud!'}
+	 ]
 };
 
 

@@ -11,6 +11,7 @@ Are there any modules or libraries used to collaborate in this project?
 
 - Check out this [tutorial][Tutorial] to set up on both **Windows** and **Mac**.
 
+After you've cloned the repo:
 - In cmd, cd to the cloned repo and run:
 ````
 npm install

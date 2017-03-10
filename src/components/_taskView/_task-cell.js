@@ -8,20 +8,24 @@ import {
 	PanResponder,
 	Animated,
 	Dimensions,
-	Button
+	Button,
+	TouchableHighlight
 } from 'react-native';
 import * as actions from '../../actions/actions'
 
-const TaskCell = (props) => {
-	return (
-		<View>
-			<Text>Title {props.obj.title}</Text>
-      <Text>Due Date is {props.obj.deadline}</Text>
-      <Text>Notes: {props.obj.notes}</Text>
-			<View style={styles.separator} />
-		</View>
-	);
-};
+class TaskCell extends View {
+	render() {
+		return (
+			<TouchableHighlight underlayColor='#dddddd' style={{height: 44}}>
+				<View>
+					<Text style={{fontSize: 20, color: '#000000'}} numberOfLines={1}>{this.props.rowData.title}</Text>
+					<Text style={{fontSize: 12, color: '#000000'}} numberOfLines={1}>{this.props.rowData.notes}</Text>
+					<View style={styles.separator} />
+				</View>
+			</TouchableHighlight>
+		);
+	}
+}
 
 export default connect(
     (state) => ({

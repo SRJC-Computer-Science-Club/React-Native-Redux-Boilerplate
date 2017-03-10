@@ -15,7 +15,7 @@ import {
 	Platform
 } from 'react-native';
 import * as actions from './actions/actions'
-import PageOne from './components/page1'
+import TasksView from './components/tasks'
 import PageTwo from './components/page2'
 
 import Header from './components/header'
@@ -32,7 +32,7 @@ const App = (props) => {
     //BEFORE we render the component we decide what page it should be
     let page = null;
 		if (props.currentPage == 1) {
-		    page = < PageOne / > ;
+		    page = < TasksView / > ;
 		} else {
 		    page = < PageTwo / > ;
 	}

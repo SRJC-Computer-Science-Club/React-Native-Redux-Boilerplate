@@ -1,7 +1,8 @@
+/**
+ * Created by drunkengranite on 2/24/17.
+ */
 import React from 'react';
 import {connect} from 'react-redux'
-import * as actions from '../actions/actions'
-import { incrementCounter } from '../actions/actions'
 import {
 	AppRegistry,
 	StyleSheet,
@@ -12,25 +13,48 @@ import {
 	Dimensions,
 	Button
 } from 'react-native';
+import * as actions from '../actions/actions'
 
-import TaskCell from './taskCell'
+import TaskTable from './_taskView/_tasksTable'
 
-const TaskTable = (props) => {
-	return (
-		<View>
-			<Text>List of Tasks</Text>
-			{props.tasks.map(function(object,index){
-				return <TaskCell obj={object} key={index}/>
-			})}
+const TasksView = (props) => {
+
+	//runs  an action on startup, this is like gte all saved data or other shit
+
+
+	return(
+		<View style={PageOneStyles.container}>
+			<TaskTable/>
 		</View>
 	);
 };
 
 export default connect(
 	(state) => ({
-		tasks: state.data.tasks
 	}),
 	(dispatch) => ({
-		//nothing is here because the header never changes the store, only displays shit from it
+		increment: (name) => dispatch(actions.incrementCounter(name)),
+		decrement: (name) => dispatch(actions.decrementCounter(name))
 	})
-)(TaskTable)
+)(TasksView)
+
+
+
+const PageOneStyles = StyleSheet.create({
+	container: {
+		flex: 1,
+		flexDirection: 'column',
+		justifyContent:"center",
+		alignItems: 'center',
+	},
+	counterContainer: {
+		flexDirection: 'row',
+		justifyContent:"center",
+		alignItems: 'center',
+		backgroundColor: "#212331",
+	},
+	incrementButton: {
+		alignSelf: 'center',
+		color: 'white'
+	}
+});

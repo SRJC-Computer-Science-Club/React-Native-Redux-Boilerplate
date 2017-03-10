@@ -10,7 +10,7 @@ import {
 	Dimensions,
 	Button
 } from 'react-native';
-import * as actions from '../actions/actions'
+import * as actions from '../../actions/actions'
 
 const TaskCell = (props) => {
 	return (

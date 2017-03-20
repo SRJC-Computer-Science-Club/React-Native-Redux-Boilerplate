@@ -16,7 +16,6 @@ import {
 } from 'react-native';
 import * as actions from './actions/actions'
 import TabBar from './components/tabBar'
-import Toolbar from './components/toolbar'
 
 const App = (props) => {
 

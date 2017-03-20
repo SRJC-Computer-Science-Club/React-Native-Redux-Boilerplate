@@ -12,10 +12,11 @@ import {
     Animated,
     Dimensions,
     Button,
-	Platform
+		Platform
 } from 'react-native';
 import * as actions from './actions/actions'
 import TabBar from './components/tabBar'
+import Toolbar from './components/toolbar'
 
 const App = (props) => {
 
@@ -32,7 +33,7 @@ const App = (props) => {
 	if(Platform.OS === "ios") {
 		layout = <TabBar/>;
 	} else {
-		layout = null; //TODO Android UI
+		layout = <Toolbar/>;
 	}
 	//this is just for styling
 	if(Platform.OS === "ios"){

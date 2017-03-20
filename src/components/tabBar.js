@@ -17,12 +17,19 @@ class TabBar extends React.Component {
     selectedTab: 'tasks'
   };
 
-  _renderContent = (color: string, pageText: string, num?: number) => {
+  _renderContent = (color: string, page: string) => {
+		let view = null;
+		if (page == "browse")
+			view = <View style={[styles.tabContent, {backgroundColor: color}]}/>; //TODO Browse View
+		else if (page == "tasks")
+			view = <View style={[styles.tabContent, {backgroundColor: color}]}/>; //TODO Tasks View
+		else if (page == "git")
+			view = <View style={[styles.tabContent, {backgroundColor: color}]}/>; //TODO Git Issues View
+		else
+			view = <View style={[styles.tabContent, {backgroundColor: color}]}/>; //TODO Links View
+
     return(
-      <View style={[styles.tabContent, {backgroundColor: color}]}>
-        <Text style={styles.tabText}>{pageText}</Text>
-        <Text style={styles.tabText}>{num} re-renders of the {pageText}</Text>
-      </View>
+      view
     );
   };
 
@@ -43,7 +50,7 @@ class TabBar extends React.Component {
               selectedTab: 'browse',
             });
           }}>
-          {this._renderContent('#414A8C', 'Blue Tab')}
+          {this._renderContent('#414A8C', 'browse')}
         </TabBarIOS.Item>
         <TabBarIOS.Item
           title="Tasks"
@@ -57,7 +64,7 @@ class TabBar extends React.Component {
               selectedTab: 'tasks'
             });
           }}>
-          {this._renderContent('#783E33', '')}
+          {this._renderContent('#783E33', 'browse')}
         </TabBarIOS.Item>
         <TabBarIOS.Item
           title="Issues"
@@ -70,7 +77,7 @@ class TabBar extends React.Component {
               selectedTab: 'git'
             });
           }}>
-          {this._renderContent('#21551C', 'Green Tab')}
+          {this._renderContent('#21241C', 'git')}
         </TabBarIOS.Item>
         <TabBarIOS.Item
           title="Quick Links"
@@ -82,7 +89,7 @@ class TabBar extends React.Component {
               selectedTab: 'links'
             });
           }}>
-          {this._renderContent('#21551C', 'Green Tab')}
+          {this._renderContent('#27531C', 'links')}
         </TabBarIOS.Item>
       </TabBarIOS>
     );

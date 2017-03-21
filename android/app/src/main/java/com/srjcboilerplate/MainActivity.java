@@ -2,7 +2,7 @@ package com.srjcboilerplate;
 
 import com.facebook.react.ReactActivity;
 
-public class MainActivity extends ReactActivity {
+public class MainActivity extends com.reactnativenavigation.controllers.SplashActivity {
 
     /**
      * Returns the name of the main component registered from JavaScript.

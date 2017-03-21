@@ -13,8 +13,21 @@ import com.facebook.soloader.SoLoader;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainApplication extends Application implements ReactApplication {
+public class MainApplication extends NavigationApplication {
+		@Override
+				public boolean isDebug() {
+					// Make sure you are using BuildConfig from your own application
+					return BuildConfig.DEBUG;
+				}
 
+		    @NonNull
+		    @Override
+		    public List<ReactPackage> createAdditionalReactPackages() {
+			    // Add the packages you require here.
+				// No need to add RnnPackage and MainReactPackage
+		        return null;
+		    }
+		}
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
     public boolean getUseDeveloperSupport() {

@@ -29,7 +29,7 @@ const App = (props) => {
 
 
 	let extraStyle = {};
-	let layout = null;
+	let layout = null; 
 	if(Platform.OS === "ios") {
 		layout = <TabBar/>;
 	} else {

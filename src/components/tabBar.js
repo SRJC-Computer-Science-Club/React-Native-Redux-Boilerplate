@@ -64,7 +64,7 @@ class TabBar extends React.Component {
               selectedTab: 'tasks'
             });
           }}>
-          {this._renderContent('#783E33', 'browse')}
+          {this._renderContent('#783E33', 'task')}
         </TabBarIOS.Item>
         <TabBarIOS.Item
           title="Issues"

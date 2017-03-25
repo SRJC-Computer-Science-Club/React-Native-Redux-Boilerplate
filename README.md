@@ -26,6 +26,10 @@ npm install
 react-native run-ios
 ```
 
+### Resources
+
+- [InVision prototype](https://invis.io/K8AX0FZBN)
+
 [Waffle.io]:https://waffle.io/SRJC-Computer-Science-Club/cs-app-react-native
 [Issues Ready]:https://badge.waffle.io/SRJC-Computer-Science-Club/cs-app-react-native.png?label=ready&title=Ready
 [Issues In Progress]:https://badge.waffle.io/SRJC-Computer-Science-Club/cs-app-react-native.png?label=in+progress&title=In-Progress

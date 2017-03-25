@@ -13,18 +13,20 @@ Are there any modules or libraries used to collaborate in this project?
 
 After you've cloned the repo:
 - In cmd, cd to the cloned repo and run:
-````
+
+```
 npm install
 react-native run-android
 ```
 
 - In Terminal, cd to the cloned repo and run:
-````
+
+```
 npm install
 react-native run-ios
 ```
 
-[Waffle.io]:http://waffle.io/SRJC-Computer-Science-Club/cs-app-react-native
+[Waffle.io]:https://waffle.io/SRJC-Computer-Science-Club/cs-app-react-native
 [Issues Ready]:https://badge.waffle.io/SRJC-Computer-Science-Club/cs-app-react-native.png?label=ready&title=Ready
 [Issues In Progress]:https://badge.waffle.io/SRJC-Computer-Science-Club/cs-app-react-native.png?label=in+progress&title=In-Progress
 [Issues Needs Review]:https://badge.waffle.io/SRJC-Computer-Science-Club/cs-app-react-native.png?label=needs+review&title=Needs+Review
